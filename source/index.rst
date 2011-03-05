@@ -9,7 +9,12 @@ Welcome to AsakusaSatellite's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+
+   setup
+   function
+   plugin
+   api
 
 Indices and tables
 ==================
