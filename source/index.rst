@@ -14,6 +14,7 @@ Contents:
    setup
    function
    plugin
+   writing-plugins
    api
 
 Indices and tables
