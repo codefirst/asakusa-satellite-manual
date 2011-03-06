@@ -15,12 +15,19 @@
 .. image:: images/new_room.png
 
 
-TODO
-
 チャット
 -----------------------
+1. トップページで部屋を選択します
 
-TODO
+.. image:: images/top.png
+
+2. 一番下のテキストボックスに発言内容を記入し、Sendボタンをクリックします。
+
+.. image:: images/room.png
+
+3. 発言内容が末尾に追加され、他の閲覧者に通知されます。
+
+.. image:: images/message.png
 
 ファイルアップロード
 -----------------------
