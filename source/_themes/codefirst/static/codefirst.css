@@ -14,12 +14,17 @@ body {
    color: #333;
 }
 
-h2, h3,h4 {
+h2, h3, h4 {
    background-image: url(h3.png);
    padding-left: 5px;
    color: black !IMPORTANT;
    border: 1px solid #ddd;
    font-size: 1.17em;
+}
+
+h3 {
+   background-image: url(h3.png);
+   font-size: 1.0em;
 }
 
 a,
