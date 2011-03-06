@@ -51,6 +51,14 @@
 
 全文検索
 -----------------------
+1. トップページの検索ボックスに探したい単語を入力し、Searchボタンをクリックします。
 
-TODO
+.. image:: images/top_search.png
 
+2. 検索結果が表示されます。検索結果の近くの発言を閲覧する場合は日付をクリックします。
+
+.. image:: images/search_result.png
+
+3. 検索結果の前後の発言を表示します。
+
+.. image:: images/search_result_around.png
