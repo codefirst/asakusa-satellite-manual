@@ -2,15 +2,25 @@
 =======================
 動作環境
 -----------------------
+以下のソフトウェアのインストールが必要です。
 
 * Ruby 1.8.7
 * RubyGems 1.4.2 or later
 * Bundler 1.0.7 or later
-* Google Chrome 9 or later (クライアント)
-
 
 インストール
 -----------------------
+
+以下では、3つの場合のインストール方法について説明します。
+
+* Windows 以外の OS
+* Passenger
+* Windows
+
+Windows 以外の OS
+~~~~~~~~~~~~~~~~~~~~
+
+以下のコマンドを実行してください。
 
 ::
 
@@ -23,11 +33,6 @@
     $ rake groonga:migrate
     $ ruby websocket/server.rb &
     $ bundle exec rails server
-
-Windows 以外の OS
-~~~~~~~~~~~~~~~~~~~~
-
-TODO
 
 Passenger
 ~~~~~~~~~~~~~~~~~~~~
@@ -61,10 +66,11 @@ Apache への設定に以下を記述します。
 
 DocumentRoot に AsakusaSatellite の public ディレクトリへのシンボリックリンクを作成します。
 
-例) 
+例)
 
 * DocumentRoot が /var/www
 * AsakusaSatellite が /var/AsakusaSatellite
+
 にインストールされている場合
 
 ::
@@ -72,35 +78,70 @@ DocumentRoot に AsakusaSatellite の public ディレクトリへのシンボ�
   $ cd /var/www
   $ sudo ln -s /var/AsakusaSatellite/public as
 
+AsakusaSatellite の WebSocket の設定を変更します。
+config/websocket.yml の "roots" の値を環境に応じて編集します。
+
+::
+
+  roots: 0.0.0.0/as/
+
 Apacheの再起動の後、http://hostname/as でアクセスできるようになります。
 
 Windows
 ~~~~~~~~~~~~~~~~~~~~
 
-TODO
+準備中です。
 
 対応ブラウザ
 -----------------------
 
-TODO
+AsakusaSatellite は以下のブラウザをサポートしています。
+
+* Google Chrome
+
+また、制限付きで以下のブラウザをサポートしています。
+
+* Safari
+* Mozilla Firefo
+* Opera
 
 Google Chrome
 ~~~~~~~~~~~~~~~~~~~~
 
-TODO
+すべての機能をご利用可能です。
 
 Safari
 ~~~~~~~~~~~~~~~~~~~~
 
-TODO
+以下の機能がご利用いただけません。
+
+* デスクトップ通知
 
 Mozilla Firefox
 ~~~~~~~~~~~~~~~~~~~~
 
-TODO
+バージョン 4 からのサポートです。
+WebSocket を有効にするために、以下の設定を行ってください。
+
+1. アドレスバーに "about:config" と入力します。
+2. network.websocket.override-security-block の値を "true" に変更します。
+
+以下の機能がご利用いただけません。
+
+* デスクトップ通知
 
 Opera
 ~~~~~~~~~~~~~~~~~~~~
 
-TODO
+バージョン 11 からのサポートです。
+WebSocket を有効にするために、以下の設定を行ってください。
+
+1. アドレスバーに "about:config" と入力します。
+2. "User Prefs" の "Enable WebSockets" をチェックします。
+3. "保存" をクリックします。
+
+以下の機能がご利用いただけません。
+
+* デスクトップ通知
+* ファイルアップロード
 
