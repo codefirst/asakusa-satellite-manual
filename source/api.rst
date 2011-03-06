@@ -8,7 +8,7 @@ TODO
 bot の作成例
 -----------------------
 
-::
+.. code-block:: ruby 
 
    #! /user/bin/env ruby
    # -*- mode:ruby; coding:utf-8 -*-
