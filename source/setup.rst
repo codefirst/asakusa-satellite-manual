@@ -30,9 +30,14 @@ Windows 以外の OS
     $ cp config/websocket.yml.example config/websocket.yml
     $ cp config/settings.yml.example config/settings.yml
     $ bundle install --path vendor/bundle
-    $ rake groonga:migrate
+    $ bundle exec rake groonga:migrate
     $ ruby websocket/server.rb &
     $ bundle exec rails server
+
+注意事項
+
+* unsupported column エラーが発生する場合がありますが、問題ないので無視してください。
+* MeCab がインストールされている環境では、正しく動作しない場合があります。 vendor/bundle 以下に groonga をインストールし直してください。
 
 Passenger
 ~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +95,15 @@ Apacheの再起動の後、http://hostname/as でアクセスできるように�
 Windows
 ~~~~~~~~~~~~~~~~~~~~
 
-準備中です。
+以下の Ruby での動作を確認しています。
+
+* Ruby 1.8.7 (http://rubyinstaller.org/downloads/)
+
+また、以下のアドオンのインストールが必要です。
+
+* DevKit (http://rubyinstaller.org/downloads/)
+
+それ以外は、Windows 以外の OS の場合と同じです。
 
 対応ブラウザ
 -----------------------
