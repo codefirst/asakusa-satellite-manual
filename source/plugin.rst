@@ -15,9 +15,9 @@ config/filter.yml に以下を記述します
 .. code-block:: ruby
 
   - name: redmine_ticket_link
-    roots: RedmineのルートURL
-    api_key: Redmine の個人設定 > APIアクセスキー
-    project: チケット作成対象のプロジェクトの識別子
+    roots: "Redmine のルート URL"
+    api_key: "Redmine の個人設定 > API アクセスキー"
+    project: "チケット作成対象のプロジェクトの識別子"
 
 コードハイライト
 -----------------------
@@ -26,8 +26,8 @@ config/filter.yml に以下を記述します
 ソースコードをハイライトします。
 記法は
 
-* １行目に 言語\:\:
-* ２行目以降にソースコードを記述します。
+* １行目に **言語\:\:**
+* ２行目以降に **ソースコード** を記述します。
 
 例えば,
 
@@ -108,4 +108,4 @@ config/filter.yml に以下を記述します
 .. code-block:: ruby
 
   - name: jenkins_filter
-    roots: Jenkins の URL
+    roots: "Jenkins の URL"
