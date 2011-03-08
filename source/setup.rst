@@ -88,7 +88,7 @@ config/websocket.yml の "roots" の値を環境に応じて編集します。
 
 ::
 
-  roots: 0.0.0.0/as/
+  roots: localhost/as/
 
 Apacheの再起動の後、http://hostname/as でアクセスできるようになります。
 
