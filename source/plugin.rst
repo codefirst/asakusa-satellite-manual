@@ -17,7 +17,7 @@ config/filter.yml に以下を記述します
   - name: redmine_ticket_link
     roots: RedmineのルートURL
     api_key: Redmine の個人設定 > APIアクセスキー
-    project: デフォルトのプロジェクト識別子
+    project: チケット作成対象のプロジェクトの識別子
 
 コードハイライト
 -----------------------
@@ -37,6 +37,16 @@ config/filter.yml に以下を記述します
   puts "Hello World!"
 
 と記述することで、２行目がハイライトして表示されます。
+
+また、Graphviz の dot 記法もサポートしています。
+
+.. code-block:: ruby
+
+  graphviz::
+  digraph{A->B->C->A}
+
+のように、 **graphviz::** に続けて dot 記法を記述することで
+簡単なグラフを描画することができます。
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
