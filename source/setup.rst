@@ -136,7 +136,7 @@ Mozilla Firefox
 バージョン 4 からのサポートです。
 WebSocket を有効にするために、以下の設定を行ってください。
 
-1. アドレスバーに "about:config" と入力します。
+1. アドレスバーに "about\:config" と入力します。
 2. network.websocket.override-security-block の値を "true" に変更します。
 
 以下の機能がご利用いただけません。
@@ -149,7 +149,7 @@ Opera
 バージョン 11 からのサポートです。
 WebSocket を有効にするために、以下の設定を行ってください。
 
-1. アドレスバーに "about:config" と入力します。
+1. アドレスバーに "about\:config" と入力します。
 2. "User Prefs" の "Enable WebSockets" をチェックします。
 3. "保存" をクリックします。
 
