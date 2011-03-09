@@ -19,7 +19,8 @@ Update process
 ----------------
 
     $ vim source/index.rst
-    $ make html
+    $ rm build/doctrees
+    $ make clean html
     $ cd build/html/
     $ git commit -a -m "Updated manual contents"
     $ git push origin gh-pages
