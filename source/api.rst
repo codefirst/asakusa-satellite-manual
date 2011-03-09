@@ -1,14 +1,36 @@
 API
 =======================
-復活の呪文
+
+本章では、AsakusaSatellite が提供している API について説明します。
+外部のアプリケーションから、AsakusaSatellite に
+発言を投稿したり、発言を取得したりすることができます。
+
+API キー
 -----------------------
 
-TODO
+API キーは、API を利用するために使用する認証用のキーです。
+キーを利用することで、AsakusaSatellite は
+ユーザを認証することができます。
+そのため、API キーは他人に渡してはいけません。
+
+API キーを取得するには、
+画面右上のログインユーザ名のリンクをクリックし、
+個人情報画面を開きます。
+
+.. image:: images/api_key.png
+
+画面に表示されているランダムな文字列が、
+ログインユーザを認証するための API キーです。
+
+**Generate** ボタンをクリックすると再生成します。
 
 bot の作成例
 -----------------------
 
-.. code-block:: ruby 
+以下は、部屋番号と発言をコマンドラインオプションで指定して
+発言を行うプログラムの例です。
+
+.. code-block:: ruby
 
    #! /user/bin/env ruby
    # -*- mode:ruby; coding:utf-8 -*-
@@ -17,11 +39,8 @@ bot の作成例
    # example for bot
    # ------------------------------
 
-   # Twitter's screen name
-   ScreenName = "AsaxaSatellite"
-
    # Get from http://$AS_ROOT/account/index
-   Password   = "AsGklaaVMtMiVxx69OEsZfcma"
+   ApiKey   = "YOUR_API_KEY"
 
    # EntryPoint
    EntryPoint = "http://localhost:3000/api/v1"
@@ -38,15 +57,9 @@ bot の作成例
    uri = URI(EntryPoint)
 
    Net::HTTP.start(uri.host, uri.port) do| http |
-     # login
-     session = http.get(uri.path +
-                        "/login?user=#{ScreenName}&password=#{Password}")
-     cookie  = session['set-cookie'].split(";",2).first
-
      # post message
      p http.post(uri.path + "/message",
-                 "room_id=#{room_id}&message=#{message}",
-                 "Cookie" => cookie)
+                 "room_id=#{room_id}&message=#{message}&api_key=#{ApyKey}")
    end
 
 
