@@ -4,7 +4,7 @@ AsakusaSatellite is [here](http://codefirst.github.com/AsakusaSatellite/)
 
 Requirement
 ----------------
- * Sphinx 1.0.5 or later
+ * Sphinx 1.0.7 or later
  * Git 1.7 or later
 
 Setup
