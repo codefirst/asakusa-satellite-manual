@@ -115,7 +115,7 @@ AsakusaSatellite は以下のブラウザをサポートしています。
 また、制限付きで以下のブラウザをサポートしています。
 
 * Safari
-* Mozilla Firefo
+* Mozilla Firefox
 * Opera
 
 Google Chrome
