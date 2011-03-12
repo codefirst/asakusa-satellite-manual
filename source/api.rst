@@ -30,7 +30,7 @@ RESTful API
 メソッドについて
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-PUT 及び DELETE に対応していないブラウザでは、
+PUT 及び DELETE に対応していないライブラリでは、
 パラメータに **_method=put** または **_method=delete** を
 付加して POST することで同じ動作をさせることができます。
 
@@ -45,7 +45,7 @@ PUT 及び DELETE に対応していないブラウザでは、
     * **format** (必須)  … 指定した形式で結果を返します。現在は **json** のみが有効です。
 
   * メソッド: **GET**
-  * パラメータ
+  * パラメータ:
 
     * なし
 
@@ -164,6 +164,38 @@ PUT 及び DELETE に対応していないブラウザでは、
   * パラメータ:
 
     * **api_key** (必須)  … ユーザの API キーを指定します
+
+WebSocket API
+^^^^^^^^^^^^^^^^^^^^^^^
+
+WebSocket サーバに接続することで、
+発言の追加や変更、削除のタイミングを知ることが出来ます。
+接続は WebSocket のプロトコルに対応したライブラリを利用してください。
+
+* WebSocket サーバへの接続
+
+  * URL: **ws://hostname:port/**
+
+    * **hostname** … WebSocket のサーバのアドレスを指定します
+    * **port** … WebSocket のサーバのポートを指定します。config/websocket.yml の **websocketPort** で設定します。デフォルトは **18081** です。
+
+  * パラメータ:
+
+    * **room_id** (必須) … 部屋の ID を指定します。
+
+* 送信されるデータ
+
+  * 発言の作成
+
+    * { "event" : 'create', "content": "<message の JSON 形式>" }
+
+  * 発言の変更
+
+    * { "event" : 'update', "content": "<message の JSON 形式>" }
+
+  * 発言の削除
+
+    * { "event" : 'delete', "id": "<message の ID>" }
 
 bot の作成例
 -----------------------
