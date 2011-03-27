@@ -19,6 +19,22 @@
 
 .. image:: images/delete_room.png
 
+部屋の設定変更
+-----------------------
+部屋の設定を変更するためには、部屋を表示し、
+部屋名の右にある設定アイコンをクリックします。
+
+.. image:: images/room_config.png
+
+設定を変更し、 **Update Config** ボタンをクリックします。
+
+.. image:: images/config_page.png
+
+また画面の下半分はプラグインの設定画面へのリンクです。
+**configure** リンクをクリックすることで、プラグインの設定ページに移動できます。
+
+.. image:: images/plugin_config_link.png
+
 チャット
 -----------------------
 1. トップページで部屋を選択します
