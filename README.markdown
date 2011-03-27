@@ -19,7 +19,7 @@ Update process
 ----------------
 
     $ vim source/index.rst
-    $ rm build/doctrees
+    $ rm -rf build/doctrees
     $ make clean html
     $ cd build/html/
     $ git commit -a -m "Updated manual contents"

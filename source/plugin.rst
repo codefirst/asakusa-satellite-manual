@@ -109,3 +109,51 @@ config/filter.yml に以下を記述します
 
   - name: jenkins_filter
     roots: "Jenkins の URL"
+
+ローカル認証
+-----------------------
+機能
+^^^^^^^^^^^^^^^^^^^^^^^
+AsakusaSatellite は Twitter の OAuth を用いて認証を行いますが、
+本プラグインを有効にすると、ローカルのユーザリストを用いた認証に切り替えます。
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^
+<AS_ROOT>/config/settings.yml に以下を記述します。
+本設定を行うことにより、Twitter の OAuth による認証は無効になり、
+ローカル認証が有効になります。
+
+.. code-block:: ruby
+
+  login_link: http://hostname:3000/localauth/login
+
+次に、ユーザリストにユーザを追加します。
+ユーザリストは以下のファイルです。
+
+  <AS_ROOT>/vendor/plugins/as_localauth_plugin/config/users.yml
+
+内容は以下の形式です。
+
+.. code-block:: ruby
+
+  testuser1:
+    screen_name: Test User1
+    password: b444ac06613fc8d63795be9ad0beaf55011936ac
+    profile_image_url: http://example.com/test1_user.png
+
+ユーザリストは YAML 形式で記述します。
+
+**testuser1 の部分** にはユーザ ID を記述します。
+
+**screen_name** はユーザの表示名を記述します。
+
+**password** にはパスワードの SHA-1 ハッシュを記述します。
+SHA-1 ハッシュの生成は、以下のコマンドで行うことができます。
+
+.. code-block:: sh
+
+  $ ruby <AS_ROOT>/vendor/plugins/as_localauth_plugin/script/gen_sha1 <PASSWORD>
+
+**profile_image_url** にはユーザのアイコンの URL を記述します。
+データ URI スキームも指定することもできます。
+testuser2 の例を参考にしてください。
