@@ -175,14 +175,14 @@ WebSocket サーバに接続することで、
 
 * WebSocket サーバへの接続
 
-  * URL: **ws://hostname:port/**
+  * URL: **ws://hostname:port/room**
 
     * **hostname** … WebSocket のサーバのアドレスを指定します
     * **port** … WebSocket のサーバのポートを指定します。config/websocket.yml の **websocketPort** で設定します。デフォルトは **18081** です。
 
   * パラメータ:
 
-    * **room_id** (必須) … 部屋の ID を指定します。
+    * **id** (必須) … 部屋の ID を指定します。
 
 * 送信されるデータ
 
@@ -196,7 +196,7 @@ WebSocket サーバに接続することで、
 
   * 発言の削除
 
-    * { "event" : 'delete', "id": "<message の ID>" }
+    * { "event" : 'delete', "content" : { "id": "<message の ID>" } }
 
 bot の作成例
 -----------------------
