@@ -22,6 +22,8 @@ config/filter.yml に以下を記述します
 
 .. image:: images/redmine_config.png
 
+.. _graphviz:
+
 コードハイライト
 -----------------------
 機能
@@ -112,6 +114,8 @@ config/filter.yml に以下を記述します
 
   - name: jenkins_filter
     roots: "Jenkins の URL"
+
+.. _localauth:
 
 ローカル認証
 -----------------------

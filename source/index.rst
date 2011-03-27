@@ -16,6 +16,7 @@ Contents:
    plugin
    writing-plugins
    api
+   changelog
 
 Indices and tables
 ==================
