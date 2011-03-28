@@ -132,7 +132,7 @@ AsakusaSatellite は Twitter の OAuth を用いて認証を行いますが、
 
 .. code-block:: ruby
 
-  login_link: http://hostname:3000/localauth/login
+  login_link: "localauth"
 
 次に、ユーザリストにユーザを追加します。
 ユーザリストは以下のファイルです。
