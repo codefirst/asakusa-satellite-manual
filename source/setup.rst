@@ -23,7 +23,7 @@ Windows 以外の OS
 ダウンロードリンク_ から最新版をダウンロードし、適当なディレクトリに展開してください。
 展開したディレクトリを AsakusaSatellite にリネームし、以下のコマンドを実行してください。
 
-.. _ダウンロードリンク: http://www.python.org://github.com/codefirst/AsakusaSatellite/archives/master
+.. _ダウンロードリンク: http://github.com/codefirst/AsakusaSatellite/archives/master
 
 ::
 
