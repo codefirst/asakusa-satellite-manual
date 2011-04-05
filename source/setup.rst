@@ -20,12 +20,12 @@
 Windows 以外の OS
 ~~~~~~~~~~~~~~~~~~~~
 
-以下のコマンドを実行してください。
+v0.3.0 https://github.com/codefirst/AsakusaSatellite/zipball/v0.3.0 をダウンロードし、適当なディレクトリに展開してください。
+
+展開したディレクトリに移動し、以下のコマンドを実行してください。
 
 ::
 
-    $ git clone git://github.com/codefirst/AsakusaSatellite.git
-    $ cd AsakusaSatellite
     $ cp config/filter.yml.example config/filter.yml
     $ cp config/websocket.yml.example config/websocket.yml
     $ cp config/settings.yml.example config/settings.yml
