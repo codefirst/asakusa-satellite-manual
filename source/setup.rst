@@ -20,12 +20,14 @@
 Windows 以外の OS
 ~~~~~~~~~~~~~~~~~~~~
 
-v0.3.0 https://github.com/codefirst/AsakusaSatellite/zipball/v0.3.0 をダウンロードし、適当なディレクトリに展開してください。
+ダウンロードリンク_ から最新版をダウンロードし、適当なディレクトリに展開してください。
+展開したディレクトリを AsakusaSatellite にリネームし、以下のコマンドを実行してください。
 
-展開したディレクトリに移動し、以下のコマンドを実行してください。
+.. _ダウンロードリンク: http://www.python.org://github.com/codefirst/AsakusaSatellite/archives/master
 
 ::
 
+    $ cd AsakusaSatellite
     $ cp config/filter.yml.example config/filter.yml
     $ cp config/websocket.yml.example config/websocket.yml
     $ cp config/settings.yml.example config/settings.yml
