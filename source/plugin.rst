@@ -164,3 +164,27 @@ SHA-1 ハッシュの生成は、以下のコマンドで行うことができ�
 **profile_image_url** にはユーザのアイコンの URL を記述します。
 データ URI スキームも指定することもできます。
 testuser2 の例を参考にしてください。
+
+Redmine API アクセスキー認証
+-----------------------
+機能
+^^^^^^^^^^^^^^^^^^^^^^^
+AsakusaSatellite の認証を Redmine の API アクセスキーによる認証に切り替えます。
+
+.. image:: images/as_redmineauth_plugin.png
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^
+<AS_ROOT>/config/settings.yml に以下を記述します。
+
+.. code-block:: ruby
+
+  login_link : "redmineauth"
+  login_link_redmine: "Redmine の URL"
+
+使用方法
+^^^^^^^^^^^^^^^^^^^^^^^
+1. 「ログイン」リンクをクリックします。
+2. テキストボックスにRedmineのAPIアクセスキーを入力し、ログインボタンをクリックします。
+
+
