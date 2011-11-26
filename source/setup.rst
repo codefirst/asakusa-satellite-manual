@@ -7,18 +7,19 @@
 * Ruby 1.8.7
 * RubyGems 1.4.2 or later
 * Bundler 1.0.7 or later
+* MongoDB 1.8.1 or later
 
 インストール
 -----------------------
 
 以下では、3つの場合のインストール方法について説明します。
 
-* Windows 以外の OS
-* Passenger
+* Windows以外のOS(単体起動)
+* Windows以外のOS(PassengerによるApacheとの連携)
 * Windows
 
-Windows 以外の OS
-~~~~~~~~~~~~~~~~~~~~
+Windows以外のOS(単体起動)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ダウンロードリンク_ から最新版をダウンロードし、適当なディレクトリに展開してください。
 展開したディレクトリを AsakusaSatellite にリネームし、以下のコマンドを実行してください。
@@ -27,23 +28,22 @@ Windows 以外の OS
 
 ::
 
+    # MongoDBの起動(起動済みの場合は不要)
+    $ mongod --dbpath <dir_name>
+
+    # 展開ディレクトリへの移動
     $ cd AsakusaSatellite
-    $ cp config/filter.yml.example config/filter.yml
-    $ cp config/websocket.yml.example config/websocket.yml
-    $ cp config/settings.yml.example config/settings.yml
+
+    # 依存ライブラリのインストール
     $ bundle install --path vendor/bundle
-    $ bundle exec rake groonga:migrate
-    $ ruby websocket/server.rb &
+
+    # WebSocketサーバ、AsakusaSatellite本体の起動
+    $ bundle exec thin -R socky/config.ru -p3002 start &
     $ bundle exec rails server
 
-注意事項
-
-* unsupported column エラーが発生する場合がありますが、問題ないので無視してください。
-* MeCab がインストールされている環境では、正しく動作しない場合があります。 vendor/bundle 以下に groonga をインストールし直してください。
-
-Passenger
-~~~~~~~~~~~~~~~~~~~~
-gem から passenger をインストールします。
+Windows以外のOS(PassengerによるApacheとの連携)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gem から Passenger をインストールします。
 ::
 
   $ gem install passenger
@@ -84,13 +84,6 @@ DocumentRoot に AsakusaSatellite の public ディレクトリへのシンボ�
 
   $ cd /var/www
   $ sudo ln -s /var/AsakusaSatellite/public as
-
-AsakusaSatellite の WebSocket の設定を変更します。
-config/websocket.yml の "roots" の値を環境に応じて編集します。
-
-::
-
-  roots: localhost/as/
 
 Apacheの再起動の後、http://hostname/as でアクセスできるようになります。
 
