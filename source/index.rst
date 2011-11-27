@@ -13,6 +13,7 @@ Contents:
 
    setup
    function
+   websocket
    plugin
    writing-plugins
    api
@@ -20,7 +21,7 @@ Contents:
 
 .. Indices and tables
 .. ==================
-.. 
+..
 .. * :ref:`genindex`
 .. * :ref:`modindex`
 .. * :ref:`search`
