@@ -99,22 +99,6 @@ config/filter.yml に以下を記述します
 
   - name: twitter_link
 
-
-Jenkins リンク
------------------------
-機能
-^^^^^^^^^^^^^^^^^^^^^^^
-メッセージ中の **::jenkins:{Job名}:{Job番号}** を Jenkins へのリンクに変換します。
-
-設定
-^^^^^^^^^^^^^^^^^^^^^^^
-config/filter.yml に以下を記述します
-
-.. code-block:: ruby
-
-  - name: jenkins_filter
-    roots: "Jenkins の URL"
-
 .. _localauth:
 
 ローカル認証
