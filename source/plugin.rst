@@ -101,6 +101,21 @@ config/filter.yml に以下を記述します
 
 .. _localauth:
 
+QuoteItプラグイン
+------------------------------
+機能
+^^^^^^^^^^^^^^^^^^^^^^^
+メッセージ中のURLを `QuoteIt <http://quoteit.heroku.com>`_ を用いて展開します。
+各種画像サービス、Twitter、Slideshare等の展開ができます。
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^
+config/filter.yml に以下を記述します
+
+.. code-block:: ruby
+
+  - name: quote_it
+
 ローカル認証
 -----------------------
 機能
