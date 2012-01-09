@@ -15,10 +15,9 @@ config/filter.yml に以下を記述します
 .. code-block:: ruby
 
   - name: redmine_ticket_link
-    roots: "Redmine のルート URL"
-    api_key: "Redmine の個人設定 > API アクセスキー"
 
-また部屋の設定画面からチケットを作成するプロジェクトを指定できます。
+また部屋の設定画面からRedmineのルートURL、APIアクセスキー、チケットを作成するプロジェクトを指定できます。
+APIアクセスキーはRedmineの"個人設定 > API アクセスキー"から確認できます。
 
 .. image:: images/redmine_config.png
 
