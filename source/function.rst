@@ -6,7 +6,7 @@
 
 .. image:: images/create_new_room_top.png
 
-2. 部屋名を入力し、 **Create** ボタンをクリックします。
+2. 部屋名を入力し、 **Create** ボタンをクリックします。 このとき **public room** のチェックをはずすと、参加者のみに公開される非公開部屋を作成できます。 参加者の追加・削除は部屋の設定画面から行なえます。
 
 .. image:: images/create_new_room.png
 
@@ -28,7 +28,8 @@
 
 .. image:: images/room_config.png
 
-設定を変更し、 **Update Config** ボタンをクリックします。
+部屋名の変更や、非公開部屋の参加者の追加や削除を行なえます。
+設定変更後、 **Update Config** ボタンをクリックすることで、設定が保存されます。
 
 .. image:: images/config_page.png
 
