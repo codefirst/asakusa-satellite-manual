@@ -38,7 +38,7 @@ Windows以外のOS(単体起動)
     $ bundle install --path vendor/bundle
 
     # WebSocketサーバ、AsakusaSatellite本体の起動
-    $ bundle exec thin -R socky/config.ru -p3002 start &
+    $ bundle exec thin -R socky/config.ru -p3002 -t0 start &
     $ bundle exec rails server
 
 Windows以外のOS(PassengerによるApacheとの連携)
