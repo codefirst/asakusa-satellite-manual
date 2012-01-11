@@ -100,8 +100,12 @@ Redmine チケット作成ボタンのみが表示されます。
 
 .. image:: images/notification_config.png
 
-※ 現在のバージョンでは、一度許可した設定を取り消すことはできません。
-ご注意ください。
+許可を解除するためには、Google Chrome のアドレスバーに
+
+chrome://settings/contentExceptions#notifications
+
+と入力し、設定を行ってください。
+
 
 全文検索
 -----------------------
