@@ -34,7 +34,7 @@
 .. image:: images/config_page.png
 
 また画面の下半分はプラグインの設定画面へのリンクです。
-**configure** リンクをクリックすることで、プラグインの設定ページに移動できます。
+**Configuration** リンクをクリックすることで、プラグインの設定ページに移動できます。
 
 .. image:: images/plugin_config_link.png
 
