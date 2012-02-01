@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 3
 
    setup
+   heroku
    function
    websocket
    plugin
