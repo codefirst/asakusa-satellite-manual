@@ -11,12 +11,12 @@ Build
 ----------------
 
     $ make clean html
-    $ open build/html/AsakusaSatellite/index.html
+    $ open build/html/AsakusaSatellite/manual/index.html
 
-Update process
+Publish
 ----------------
 
     $ git push origin master
 
-See http://asakusasatellite.readthedocs.org/en/latest/index.html
+See (Read the Docs)[http://asakusasatellite.readthedocs.org/en/latest/index.html]
 
