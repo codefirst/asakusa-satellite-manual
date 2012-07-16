@@ -18,5 +18,5 @@ Publish
 
     $ git push origin master
 
-See (Read the Docs)[http://asakusasatellite.readthedocs.org/en/latest/index.html]
+See [Read the Docs](http://asakusasatellite.readthedocs.org/en/latest/index.html)
 
