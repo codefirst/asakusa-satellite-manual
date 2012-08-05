@@ -108,10 +108,10 @@ Windows
 AsakusaSatellite は以下のブラウザをサポートしています。
 
 * Google Chrome
+* Safari
 
 また、制限付きで以下のブラウザをサポートしています。
 
-* Safari
 * Mozilla Firefox
 * Opera
 
@@ -123,7 +123,7 @@ Google Chrome
 Safari
 ~~~~~~~~~~~~~~~~~~~~
 
-以下の機能がご利用いただけません。
+バージョン 6.0 以降ですべての機能をご利用可能です。
 
 * デスクトップ通知
 
@@ -132,11 +132,13 @@ Mozilla Firefox
 
 バージョン 4 からのサポートです。
 WebSocket を有効にするために、以下の設定を行ってください。
+(バージョン 7 以降ではこの設定は不要です)
 
 1. アドレスバーに "about\:config" と入力します。
 2. network.websocket.override-security-block の値を "true" に変更します。
 
 以下の機能がご利用いただけません。
+(アドオンをインストールすればご利用いただけます)
 
 * デスクトップ通知
 
