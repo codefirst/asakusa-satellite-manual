@@ -94,4 +94,4 @@ config/message_pusher.yml の編集内容を commit します。
 
 .. image:: images/heroku-deploy-complete.png
 
-10. mongoDB, pusher の設定に誤りがある場合は commit, push それぞれの設定ファイルを編集の後、commit、push を行なっています。
+10. mongoDB, pusher の設定に誤りがある場合は commit, push それぞれの設定ファイルを編集の後、commit、push を行ないます。
