@@ -52,3 +52,33 @@ AsakusaSatellite を再起動することで設定が反映されます。
 有料プランを利用すれば多数のユーザの同時使用にも耐えることができます。 また、WebSocketだけでなくFlashSocketによる接続も可能なため、WebSocket非対応のブラウザからも利用できます。
 
 ただし、外部サービスを利用するため、社内での利用等には向きません。
+
+Keima
+------------------------------
+
+Pusher クローンである Keima ( https://github.com/codefirst/keima ) を利用して通信します。
+
+設定方法
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+keima にアクセスし、key を取得します。
+
+config/message_pusher.yml を以下のように編集します。
+
+::
+
+    default: keima
+    
+    engines:
+      url: <your keima url>
+      key: <your key>
+
+AsakusaSatellite を再起動することで設定が反映されます。
+
+利点・欠点
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+社内のネットワーク等に設置した Keima を利用できるため、セキュリティを確保することができます。
+
+また、Pusher 利用時と同様に、WebSocket 非対応のブラウザからも利用が可能です。
+
