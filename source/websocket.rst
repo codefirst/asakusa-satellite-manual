@@ -61,7 +61,7 @@ Pusher クローンである Keima ( https://github.com/codefirst/keima ) を利
 設定方法
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-keima にアクセスし、key を取得します。
+keima にアクセスし、appkey を取得します。
 
 config/message_pusher.yml を以下のように編集します。
 
