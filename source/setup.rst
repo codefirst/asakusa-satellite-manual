@@ -4,7 +4,7 @@
 -----------------------
 以下のソフトウェアのインストールが必要です。
 
-* Ruby 1.8.7
+* Ruby 1.8.7 or 1.9.3
 * RubyGems 1.4.2 or later
 * Bundler 1.0.7 or later
 * MongoDB 1.8.1 or later
@@ -42,11 +42,32 @@ Windows以外のOS(単体起動)
 
     # WebSocketサーバ、AsakusaSatellite本体の起動
     $ bundle exec thin -R socky/config.ru -p3002 -t0 start &
-    $ bundle exec rails server
+    $ bundle exec rails server -e production
 
 Windows以外のOS(PassengerによるApacheとの連携)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gem から Passenger をインストールします。
+
+1. 設定ファイルの修正 
+
+   config/environments/production.rb を編集して serve_static_assets の値を以下のとおり修正します。
+
+::
+
+    config.serve_static_assets = false
+
+
+2. リソースのプリコンパイル (0.8 以降)
+
+   以下のコマンドを実行します。
+
+::
+
+    $ bundle exec rake assets:precompile RAILS_ENV=production
+
+3. Passenger のインストール
+
+   gem から Passenger をインストールします。
+
 ::
 
   $ gem install passenger
@@ -68,7 +89,10 @@ Apacheの設定ファイルへの記述が表示されるのでメモを取り�
   PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-2.2.11
   PassengerRuby /usr/bin/ruby1.8
 
-Apache への設定に以下を記述します。
+4. Apache の設定
+
+   Apache への設定に以下を記述します。
+
 ::
 
   RailsEnv production
