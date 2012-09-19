@@ -79,14 +79,21 @@ config/message_pusher.yml の編集内容を commit します。
 
     $ git commit -a -m "pusher"
 
-8. heroku へデプロイします。
+8. リソースのプリコンパイルを行います (0.8 以降)
+
+    $ bundle exec rake assets:precompile RAILS_ENV=production
+    $ git add public/assets
+    $ git commit -a -m "resources"
+
+
+9. heroku へデプロイします。
 
 ::
 
     $ git push heroku master
 
 
-9. デプロイが完了したアプリケーションにアクセスします。
+10. デプロイが完了したアプリケーションにアクセスします。
 
 ::
 
@@ -94,4 +101,4 @@ config/message_pusher.yml の編集内容を commit します。
 
 .. image:: images/heroku-deploy-complete.png
 
-10. mongoDB, pusher の設定に誤りがある場合は commit, push それぞれの設定ファイルを編集の後、commit、push を行ないます。
+11. mongoDB, pusher の設定に誤りがある場合は commit, push それぞれの設定ファイルを編集の後、commit、push を行ないます。

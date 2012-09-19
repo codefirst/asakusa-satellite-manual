@@ -35,7 +35,10 @@ Windows以外のOS(単体起動)
     $ cd AsakusaSatellite
 
     # 依存ライブラリのインストール
-    $ bundle install --path vendor/bundle
+    $ bundle install --path .bundle --without development test
+
+    # リソースのプリコンパイル (0.8 以降)
+    $ bundle exec rake assets:precompile RAILS_ENV=production
 
     # WebSocketサーバ、AsakusaSatellite本体の起動
     $ bundle exec thin -R socky/config.ru -p3002 -t0 start &
