@@ -24,7 +24,7 @@ Windows以外のOS(単体起動)
 ダウンロードリンク_ から最新版をダウンロードし、適当なディレクトリに展開してください。
 展開したディレクトリを AsakusaSatellite にリネームし、以下のコマンドを実行してください。
 
-.. _ダウンロードリンク: http://github.com/codefirst/AsakusaSatellite/archives/master
+.. _ダウンロードリンク: http://github.com/codefirst/AsakusaSatellite/tags
 
 ::
 
@@ -47,7 +47,7 @@ Windows以外のOS(単体起動)
 Windows以外のOS(PassengerによるApacheとの連携)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. 設定ファイルの修正 
+1. 設定ファイルの修正
 
    config/environments/production.rb を編集して serve_static_assets の値を以下のとおり修正します。
 
