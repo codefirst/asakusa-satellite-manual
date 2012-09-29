@@ -167,38 +167,6 @@ PUT 及び DELETE に対応していないライブラリでは、
 
     * **api_key** (必須)  … ユーザの API キーを指定します
 
-WebSocket API
------------------------
-
-WebSocket サーバに接続することで、
-発言の追加や変更、削除のタイミングを知ることが出来ます。
-接続は WebSocket のプロトコルに対応したライブラリを利用してください。
-
-* WebSocket サーバへの接続
-
-  * URL: **ws://hostname:port/room**
-
-    * **hostname** … WebSocket のサーバのアドレスを指定します
-    * **port** … WebSocket のサーバのポートを指定します。config/websocket.yml の **websocketPort** で設定します。デフォルトは **18081** です。
-
-  * パラメータ:
-
-    * **id** (必須) … 部屋の ID を指定します。
-
-* 送信されるデータ
-
-  * 発言の作成
-
-    * { "event" : 'create', "content": "<message の JSON 形式>" }
-
-  * 発言の変更
-
-    * { "event" : 'update', "content": "<message の JSON 形式>" }
-
-  * 発言の削除
-
-    * { "event" : 'delete', "content" : { "id": "<message の ID>" } }
-
 bot の作成例
 -----------------------
 
