@@ -135,7 +135,7 @@ AsakusaSatellite は Twitter の OAuth を用いて認証を行いますが、
 次に、ユーザリストにユーザを追加します。
 ユーザリストは以下のファイルです。
 
-  <AS_ROOT>/vendor/plugins/as_localauth_plugin/config/users.yml
+  <AS_ROOT>/plugins/as_localauth_plugin/config/users.yml
 
 内容は以下の形式です。
 
@@ -157,7 +157,7 @@ SHA-1 ハッシュの生成は、以下のコマンドで行うことができ�
 
 .. code-block:: sh
 
-  $ ruby <AS_ROOT>/vendor/plugins/as_localauth_plugin/script/gen_sha1 <PASSWORD>
+  $ ruby <AS_ROOT>/plugins/as_localauth_plugin/script/gen_sha1 <PASSWORD>
 
 **profile_image_url** にはユーザのアイコンの URL を記述します。
 データ URI スキームも指定することもできます。

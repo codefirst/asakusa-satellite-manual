@@ -24,7 +24,7 @@ AsakusaSatellite はプラグインを作成することにより、
 
     $ rails g as_filter フィルタ名
 
-とすることで vendor/plugins/as_フィルタ名_filter に以下に以下のように生成されます。
+とすることで plugins/as_フィルタ名_filter に以下に以下のように生成されます。
 
 * init.rb: プラグインの初期設定
 * lib/フィルタ名_filter.rb: フィルタプログラム
@@ -32,7 +32,7 @@ AsakusaSatellite はプラグインを作成することにより、
 
 フィルタの登録
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-フィルタの登録は config/filter.yml で行います。
+フィルタの登録は config/filter_infra.yml で行います。
 登録されたフィルタは、上から順番に適用されます。
 
 .. code-block:: yaml
@@ -85,10 +85,10 @@ AsakusaSatellite::Hook::Listener を継承したクラスはRailsの起動時に
 
 ビューフックリスナの作成
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-vendor/plugins/ 以下にプラグインフォルダを作成します。
-ここでは vendor/plugins/test_listener とします
+plugins/ 以下にプラグインフォルダを作成します。
+ここでは plugins/test_listener とします
 
-vendor/plugins/test_listener/lib を作成し、リスナクラスを実装します。
+plugins/test_listener/lib を作成し、リスナクラスを実装します。
 
 .. code-block:: ruby
 
