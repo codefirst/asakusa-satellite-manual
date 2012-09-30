@@ -136,7 +136,18 @@ config/filter\_intra.yml に以下を記述します
 
 展開される画像は、環境変数 AS_EMOJI_URL_ROOT を使用して $AS_EMOJI_URL_ROOT/絵文字名.png として展開されます。
 
-例えば、環境変数 AS_EMOJI_URL_ROOT に http://www.emoji-cheat-sheet.com/graphics/emojis を設定し、メッセージに :smile: と記述した場合は、http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png に展開され、以下のように画像として表示します。
+AsakusaSatellite に同梱する場合は以下の手順で画像ファイルを配備します。
+
+1. <AS_ROOT>/public/emoji に画像ファイルを XXX.png として格納します
+2. 環境変数 AS_EMOJI_URL_ROOT に http(s)://as.root.url/emoji を指定して AsakusaSatellite を起動します
+
+
+動作確認が目的の場合は以下の2つの URL を指定できます。
+
+* http://www.emoji-cheat-sheet.com/graphics/emojis/
+* http://assets.github.com/images/icons/emoji/
+
+上記 URL を指定した場合、メッセージ中に :smile: と記述した場合、http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png と展開され、以下のように画像を表示します。
 
 .. image:: http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png
    :width: 16px
