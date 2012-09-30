@@ -44,6 +44,19 @@ Windows以外のOS(単体起動)
     $ bundle exec thin -R socky/config.ru -p3002 -t0 start &
     $ bundle exec rails server -e production
 
+localhost 以外で運用する場合には、WebSocket サーバの設定を変更してください。
+config/message_pusher.yml の **localhost** を IP アドレス等で置換してください。
+
+::
+
+   socky:
+     http: http://localhost:3002/http
+     http: ws://localhost:3002/websocket
+     app: as
+     secret: secret
+
+設定の反映には、AsakusaSatellite の再起動が必要です。
+
 Windows以外のOS(PassengerによるApacheとの連携)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

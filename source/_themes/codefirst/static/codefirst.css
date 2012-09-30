@@ -22,6 +22,12 @@ h2, h3, h4 {
    font-size: 1.17em;
 }
 
+h2 {
+   border: 1px solid #dfdfdf;
+   padding-top: 3px;
+   padding-bottom: 3px;
+}
+
 h3 {
    background-image: url(h3.png);
    font-size: 1.0em;
