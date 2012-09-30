@@ -138,7 +138,7 @@ config/filter\_intra.yml に以下を記述します
 
 AsakusaSatellite に同梱する場合は以下の手順で画像ファイルを配備します。
 
-1. <AS_ROOT>/public/emoji に画像ファイルを XXX.png として格納します
+1. <AS_ROOT>/public/emoji に画像ファイルを、拡張子を .png として格納します
 2. 環境変数 AS_EMOJI_URL_ROOT に http(s)://as.root.url/emoji を指定して AsakusaSatellite を起動します
 
 
