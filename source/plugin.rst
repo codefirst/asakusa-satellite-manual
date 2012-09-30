@@ -121,6 +121,27 @@ config/filter\_intra.yml に以下を記述します
 
   - name: quote_it
 
+絵文字プラグイン
+-----------------------------
+
+メッセージ中の :絵文字名: を画像として展開します。
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^
+config/filter\_intra.yml に以下を記述します
+
+.. code-block:: ruby
+
+  - name: emoji_filter
+
+展開される画像は、環境変数 AS_EMOJI_URL_ROOT を使用して $AS_EMOJI_URL_ROOT/絵文字名.png として展開されます。
+
+例えば、環境変数 AS_EMOJI_URL_ROOT に http://www.emoji-cheat-sheet.com/graphics/emojis を設定し、メッセージに :smile: と記述した場合は、http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png に展開され、以下のように画像として表示します。
+
+.. image:: http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png
+   :width: 16px
+
+
 ローカル認証
 -----------------------
 機能
@@ -196,6 +217,6 @@ AsakusaSatellite の認証を Redmine の API アクセスキーによる認証�
 3. ログインボタンをクリックします。
 
 private な部屋に追加するときの注意点
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 このプラグインで認証されたユーザは、ユーザ ID として Redmine のユーザの **メールアドレス** が保存されます。
 したがって、private に設定された部屋にこのプラグインで認証されたユーザを追加する場合は、Redmine のユーザの **メールアドレス** を指定する必要があります。
