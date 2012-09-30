@@ -74,7 +74,11 @@ http:// https:// で始まるURLをリンクに変換します。また、
 * ow.ly
 * youtu.be
 * img.ly
+* www.nicovideo.jp
 * plixi.com
+* dl.dropbox.com
+* gyazo.com
+* instagr.am
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
