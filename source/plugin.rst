@@ -187,6 +187,8 @@ AsakusaSatellite の認証を Redmine の API アクセスキーによる認証�
 使用方法
 ^^^^^^^^^^^^^^^^^^^^^^^
 1. 「ログイン」リンクをクリックします。
-2. テキストボックスにRedmineのAPIアクセスキーを入力し、ログインボタンをクリックします。
-
-
+2. 以下の情報を入力します
+  * RedmineのAPIアクセスキー
+  * AsakusaSatellite で使用するユーザ名
+  * AsakusaSatellite で使用する画像の URL
+3. ログインボタンをクリックします。
