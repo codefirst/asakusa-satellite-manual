@@ -165,7 +165,7 @@ emoticon プラグイン
 
   - name: emoticon_filter
 
-2.. plugins/as_emoticon_filter/rule.yml を編集し、変換ルールを作成します。
+2. plugins/as_emoticon_filter/rule.yml を編集し、変換ルールを作成します。
 
 3. <AS_ROOT>/public/emoticons に rule.yml で指定したファイル名で emiticon ファイルを保存します。
 
