@@ -153,6 +153,32 @@ AsakusaSatellite に同梱する場合は以下の手順で画像ファイルを
 .. image:: http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png
    :width: 16px
 
+emoticon プラグイン
+-----------------------------
+ルールベースでメッセージの変換を定義し、画像として展開します。
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^
+1. config/filter\_intra.yml に以下を記述します
+
+.. code-block:: ruby
+
+  - name: emoticon_filter
+
+2.. plugins/as_emoticon_filter/rule.yml を編集し、変換ルールを作成します。
+
+3. <AS_ROOT>/public/emoticons に rule.yml で指定したファイル名で emiticon ファイルを保存します。
+
+rule.yml は yaml 形式でキーにメッセージの変換対象、値に変換後に表示するファイル名を記述します。
+
+例えば、rule.yml に
+
+.. code-block:: ruby
+
+  - (test): test.gif
+
+と記述した場合は <AS_ROOT>/public/emoticons/test.gif に画像ファイルを保存し、メッセージ中に (test) と記述することで画像が展開されます。
+
 
 ローカル認証
 -----------------------
