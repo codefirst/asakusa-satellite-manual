@@ -141,6 +141,7 @@ AsakusaSatellite に同梱する場合は以下の手順で画像ファイルを
 1. <AS_ROOT>/public/emoji に画像ファイルを、拡張子を .png として格納します
 2. 環境変数 AS_EMOJI_URL_ROOT に http(s)://as.root.url/emoji を指定して AsakusaSatellite を起動します
 
+上記のように設定した場合、メッセージ中に :xxx: と記述した場合 http(s)://as.root.url/emoji/xxx.png を展開して表示します。
 
 動作確認が目的の場合は以下の2つの URL を指定できます。
 
