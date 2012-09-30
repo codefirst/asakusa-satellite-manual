@@ -111,6 +111,8 @@ QuoteItプラグイン
 メッセージ中のURLを `QuoteIt <http://quoteit.heroku.com>`_ を用いて展開します。
 各種画像サービス、Twitter、Slideshare等の展開ができます。
 
+展開可能なサイトの一覧は `こちら <http://quoteit.heroku.com/plugins>`_ を参照してください。
+
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
 config/filter\_intra.yml に以下を記述します
