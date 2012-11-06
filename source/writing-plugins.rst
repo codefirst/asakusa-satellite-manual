@@ -141,12 +141,14 @@ AsaksuaSatellite へのログイン時の認証は `OmniAuth <https://github.com
 既存の OmniAuth Strategy を使用した認証の切り替え
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`既に公開されている OmniAuth Strategy <https://github.com/intridea/omniauth/wiki/List-of-Strategies>`_
-を利用した場合は以下のようにプラグインを作成します。
+`公開されている OmniAuth Strategy <https://github.com/intridea/omniauth/wiki/List-of-Strategies>`_
+を利用することで、認証プラグインを作成することができます。
+
+以下、プラグインの作成手順について説明します。
 
 1. プラグインの作成
 
-<AS_ROOT> ディレクトリの直下に任意のディレクトリを作成し、その直下に Gemfile を以下のとおり作成します。
+<AS_ROOT>/plugins ディレクトリの直下に任意のディレクトリを作成し、その直下に Gemfile を以下のとおり作成します。
 
 ::
 
@@ -201,6 +203,10 @@ provider と provider_args に渡す値については各 OmniAuth Strategy を�
 
 AsakusaSatellite を再起動することで認証が切り替わります。
 
+既存の OmniAuth Strategy を使用しているプラグインは以下の通りです。
+
+* `Twitter 認証 プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_twitterauth_plugin>`_ 
+
 
 独自 OmniAuth Strategy による認証
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -211,10 +217,12 @@ OmniAuth Strategy を自作することが可能です。
 `Strategy Contribution Guide <https://github.com/intridea/omniauth/wiki/Strategy-Contribution-Guide>`_
 を参照してください。
 
+以下、プラグインの作成手順について説明します。
+
 1. OmniAuth Strategy クラスを作成する.
 
 OmniAuth の規約にしたがって OmniAuth::Strategies モジュール以下にクラスを作成します。
-plugins ディレクトリの直下に任意のディレクトリを作成し、lib/omniauth/strategies/mystrategy.rb を以下のように作成します。
+<AS_ROOT>/plugins ディレクトリの直下に任意のディレクトリを作成し、lib/omniauth/strategies/mystrategy.rb を以下のように作成します。
 
 .. code-block:: ruby
 
@@ -223,7 +231,7 @@ plugins ディレクトリの直下に任意のディレクトリを作成し、
         class Mystrategy
           include OmniAuth::Strategy
 
-          args [:arg1, arg2] # provider_args で渡される引数
+          args [:arg1, :arg2] # provider_args で渡される引数
 
           def request_phase
             ...
@@ -276,3 +284,9 @@ request_phase メソッドの実装で独自に作成したページにリダイ
 4. AsakusaSatellite の再起動
 
 AsakusaSatellite を再起動することで認証が切り替わります。
+
+独自 OmniAuth Strategy を使用しているプラグインは以下の通りです。
+
+* `ローカル認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_localauth_plugin>`_
+* `Redmine 認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_redmineauth_plugin>`_
+
