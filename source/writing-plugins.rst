@@ -200,3 +200,79 @@ provider と provider_args に渡す値については各 OmniAuth Strategy を�
 4. AsakusaSatellite の再起動
 
 AsakusaSatellite を再起動することで認証が切り替わります。
+
+
+独自 OmniAuth Strategy による認証
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+OmniAuth Strategy を自作することが可能です。
+
+独自 OmniAuth Strategy 作成の詳細については
+`Strategy Contribution Guide <https://github.com/intridea/omniauth/wiki/Strategy-Contribution-Guide>`_
+を参照してください。
+
+1. OmniAuth Strategy クラスを作成する.
+
+OmniAuth の規約にしたがって OmniAuth::Strategies モジュール以下にクラスを作成します。
+plugins ディレクトリの直下に任意のディレクトリを作成し、lib/omniauth/strategies/mystrategy.rb を以下のように作成します。
+
+.. code-block:: ruby
+
+    module OmniAuth
+      module Strategies
+        class Mystrategy
+          include OmniAuth::Strategy
+
+          args [:arg1, arg2] # provider_args で渡される引数
+
+          def request_phase
+            ...
+          end
+
+          def callback_phase
+            ...
+          end
+
+          info {
+            {:name => '....', :nickname => '....', :image => 'http://....'}
+          }
+
+        end
+      end
+    end
+
+`OmniAuth Strategy <https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema>`_ に従い、info で取得できる値を作成します。
+
+AsakusaSatellite で使用する値は :name, :nickname および :image です。
+それぞれの意味は以下の通りです。
+
+* **:name** : ユーザを一意に識別する ID として使用します。
+* **:nickname** : ユーザの表示名として使用します。
+* **:image** : ユーザの発言などに付加される画像ファイルの場所を特定するために使用します。
+
+AsakusaSatellite プラグインは、 app ディレクトリ以下に Rails の controller, view を独自に作成できるため、
+request_phase メソッドの実装で独自に作成したページにリダイレクトすることにより、独自の認証フォームを作成することも可能です。
+
+2. 独自 Strategy を読み込む
+
+プラグインディレクトリの直下に init.rb ファイルを以下のように作成します。
+
+.. code-block:: ruby
+
+    require 'omniauth/strategies/mystrategy'
+
+3. 設定
+
+<AS_ROOT>/config/settings.yml の "omniauth" の設定項目を修正して AsakusaSatellite で利用する認証を変更します。
+
+::
+
+    omniauth:
+      provider: "mystrategy" # Strategy 名
+      provider_args: # Strategy に渡す値
+        - "引数1"
+        - "引数2"
+
+4. AsakusaSatellite の再起動
+
+AsakusaSatellite を再起動することで認証が切り替わります。
