@@ -129,3 +129,74 @@ chat_room_bottom
 message_buttons
     各発言のボタンが表示される箇所に HTML を差し込みます
 
+認証方法の変更 (0.8.1 以降)
+--------------------------------------
+
+OmniAuth による認証の切り替え
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+AsaksuaSatellite へのログイン時の認証は `OmniAuth <https://github.com/intridea/omniauth>`_ を使用しています。
+デフォルトではプロバイダとして Twitter の OAuth を利用していますが、プラグインを追加することで切り替えが可能となっています。
+
+既存の OmniAuth Strategy を使用した認証の切り替え
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`既に公開されている OmniAuth Strategy <https://github.com/intridea/omniauth/wiki/List-of-Strategies>`_
+を利用した場合は以下のようにプラグインを作成します。
+
+1. プラグインの作成
+
+<AS_ROOT> ディレクトリの直下に任意のディレクトリを作成し、その直下に Gemfile を以下のとおり作成します。
+
+::
+
+    gem 'omniauth-XXXX' # 利用する OmniAuth Strategy の gem
+
+例えば、 `Github の OAuth による認証 <https://github.com/intridea/omniauth-github>`_ を利用する場合は以下のようになります。
+
+::
+
+    gem 'omniauth-github'
+
+
+2. 依存 gem の再インストール
+
+<AS_ROOT> ディレクトリに移動し、以下のコマンドを入力して、依存 gem をインストールしなおします.
+
+::
+
+    $ bundle install --path .bundle --without development test
+
+3. 設定
+
+<AS_ROOT>/config/settings.yml の "omniauth" の設定項目を修正して AsakusaSatellite で利用する認証を変更します。
+
+::
+
+    omniauth:
+      provider: "プロバイダ"
+      provider_args:
+        - "引数1"
+        - "引数2"
+        - "..."
+
+設定内容は以下の通りです。
+
+* **provider** (必須): 使用する OmniAuth Strategy の名称を記述します。
+* **provider_args** (任意): 使用する OmniAuth Strategy の設定時に渡される引数を配列で指定します。
+
+例えば Github の OAuth による認証を利用する場合は以下のとおりとなります
+
+::
+
+    omniauth:
+      provider: "github"
+      provider_args:
+        - "<Client ID>"
+        - "<Client Secret>"
+
+provider と provider_args に渡す値については各 OmniAuth Strategy を参照してください。
+
+4. AsakusaSatellite の再起動
+
+AsakusaSatellite を再起動することで認証が切り替わります。
