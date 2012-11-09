@@ -92,15 +92,15 @@ Apacheモジュールをビルドします。
 
 Apacheの設定ファイルへの記述が表示されるのでメモを取ります。
 
-必要なパッケージのインストールを促された場合、
-指示にしたがってインストールの後再実行してください。
-
 例)
 ::
 
   LoadModule passenger_module /usr/lib/ruby/gems/1.8/gems/passenger-2.2.11/ext/apache2/mod_passenger.so
   PassengerRoot /usr/lib/ruby/gems/1.8/gems/passenger-2.2.11
   PassengerRuby /usr/bin/ruby1.8
+
+必要なパッケージのインストールを促された場合、
+指示にしたがってインストールの後再実行してください。
 
 4. Apache の設定
 
