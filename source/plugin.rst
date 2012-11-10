@@ -79,6 +79,7 @@ http:// https:// で始まるURLをリンクに変換します。また、
 * dl.dropbox.com
 * gyazo.com
 * instagr.am
+* .jpg, .jpeg, .png, .gif で終わる URL (case insensitive)
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -194,13 +195,14 @@ AsakusaSatellite は Twitter の OAuth を用いて認証を行いますが、
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
-<AS_ROOT>/config/settings.yml に以下を記述します。
+<AS_ROOT>/config/settings.yml に以下を記述します。(0.8.1 以降)
 本設定を行うことにより、Twitter の OAuth による認証は無効になり、
 ローカル認証が有効になります。
 
 .. code-block:: ruby
 
-  login_link: "localauth"
+  omniauth:
+    provider: "local"
 
 次に、ユーザリストにユーザを追加します。
 ユーザリストは以下のファイルです。
@@ -243,12 +245,14 @@ AsakusaSatellite の認証を Redmine の API アクセスキーによる認証�
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
-<AS_ROOT>/config/settings.yml に以下を記述します。
+<AS_ROOT>/config/settings.yml に以下を記述します。(0.8.1 以降)
 
 .. code-block:: ruby
 
-  login_link : "redmineauth"
-  login_link_redmine: "Redmine の URL"
+  omniauth:
+    provider: 'redmine'
+    provider_args:
+      - 'Redmine の URL'
 
 使用方法
 ^^^^^^^^^^^^^^^^^^^^^^^
