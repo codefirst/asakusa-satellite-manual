@@ -1,9 +1,9 @@
 WebSocketサーバの変更
 =======================
 
-config/message_pusher.yml により、AsakusaSatelliteで利用するWebSocketサーバを変更できます。
+<AS_ROOT>/config/message_pusher.yml により、AsakusaSatelliteで利用するWebSocketサーバを変更できます。
 
-現時点ではSocky, Pusher の2方式をサポートしています。
+現時点ではSocky, Pusher, Keima の 3 方式をサポートしています。
 
 Socky
 ------------------------------
@@ -31,7 +31,7 @@ Pusher ( http://pusher.com ) を利用して通信します。
 
 http://pusher.com に登録して、app_id, key, secretを取得します。
 
-config/message_pusher.yml を以下のように編集します。
+<AS_ROOT>/config/message_pusher.yml を以下のように編集します。
 
 ::
 
@@ -63,7 +63,7 @@ Pusher クローンである Keima ( https://github.com/codefirst/keima ) を利
 
 keima にアクセスし、appkey を取得します。
 
-config/message_pusher.yml を以下のように編集します。
+<AS_ROOT>/config/message_pusher.yml を以下のように編集します。
 
 ::
 
