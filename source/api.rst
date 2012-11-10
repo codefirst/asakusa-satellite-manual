@@ -202,7 +202,7 @@ bot の作成例
    Net::HTTP.start(uri.host, uri.port) do| http |
      # post message
      p http.post(uri.path + "/message.json",
-                 "room_id=#{room_id}&message=#{message}&api_key=#{ApyKey}")
+                 "room_id=#{room_id}&message=#{message}&api_key=#{ApiKey}")
    end
 
 
