@@ -86,12 +86,34 @@ config 変数で保持しています。
 AsakusaSatellite::Hook::Listener を継承したクラスはRailsの起動時に読み込まれ、
 自動的に登録されます。
 
+ビューフックプラグイン生成コマンド
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ジェネレータが用意されています。
+
+::
+
+    $ rails g as_viewhook プラグイン名
+
+とすることで plugins/as_プラグイン名 に以下に以下のように生成されます。
+
+* init.rb: プラグインの初期設定
+* lib/プラグイン名.rb: ビューフックプログラム
+* spec/lib/プラグイン名_spec.rb: ビューフックのテスト
+
+
 ビューフックリスナの作成
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-plugins/ 以下にプラグインフォルダを作成します。
-ここでは plugins/test_listener とします
 
-plugins/test_listener/lib を作成し、リスナクラスを実装します。
+作成コマンドを発行し、プラグインのテンプレートを生成します。
+
+ここでは test_listener とします
+
+::
+
+    $  rails g as_viewhook test_listener
+
+plugins/as_test_listener/lib/test_listener.rb を以下のように編集します。
 
 .. code-block:: ruby
 
