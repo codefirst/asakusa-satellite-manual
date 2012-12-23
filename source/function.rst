@@ -112,6 +112,11 @@
 
 .. image:: images/notification_config.png
 
+表示時間を設定する場合は、 **Notification time in second(s)** の値を
+変更し、 **Set** をクリックしてください。
+デフォルトは3秒です。0秒に設定すると、通知は表示されたままになります。
+OS X の通知センターをご利用の場合は、0秒に指定すると便利です。
+
 許可を解除するためには、Google Chrome のアドレスバーに
 
 chrome://settings/contentExceptions#notifications
