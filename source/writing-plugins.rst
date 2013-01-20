@@ -322,36 +322,46 @@ AsakusaSatellite を再起動することで認証が切り替わります。
 * `ローカル認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_localauth_plugin>`_
 * `Redmine 認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_redmineauth_plugin>`_
 
-UserScript の書き方
---------------------------------------
+UserScript で AsakusaSatellite のイベントを取得する方法 (0.8.1 以降)
+----------------------------------------------------------------------------
 
 AsakusaSatellite は、UserScript が安全にクロスドメイン制約を回避できるようにするため、
 window.postMessage を用いて各種イベントを通知します。
 
-通知されるイベントの種類
+通知されるイベントの種類と含まれる情報
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-以下のイベントが通知されます。
+通知されるイベントは type, current, data の3つの情報を持っています。
+current には現在の部屋の ID とユーザの ID が含まれます。
+data の内容は type に応じて変化します。
+
+type の種類と、data に含まれる情報は以下です。
 
 .. glossary::
 
   connect
-    websocket サーバとの接続が確立した際に通知されます
+    websocket サーバとの接続が確立した際に通知されます。
+    使用している websocket サーバにより含まれる情報は異なります。
 
   error
-    websocket サーバとの接続でエラーが発生した際に通知されます
+    websocket サーバとの接続でエラーが発生した際に通知されます。
+    使用している websocket サーバにより含まれる情報は異なります。
 
   disconnect
-    websocket サーバとの接続が切断された際に通知されます
+    websocket サーバとの接続が切断された際に通知されます。
+    使用している websocket サーバにより含まれる情報は異なります。
 
   create
-    新規メッセージを受信した際に通知されます
+    新規メッセージを受信した際に通知されます。
+    新着メッセージの全情報が含まれます。詳しくは Message モデルを参照ください。
 
   update
-    メッセージ更新された際に通知されます
+    メッセージ更新された際に通知されます。
+    新着メッセージの全情報が含まれます。詳しくは Message モデルを参照ください。
 
   delete
-    メッセージが削除された際に通知されます
+    メッセージが削除された際に通知されます。
+    削除されたメッセージの ID が含まれます。
 
 
 イベントハンドラのサンプル
