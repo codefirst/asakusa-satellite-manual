@@ -185,6 +185,38 @@ rule.yml は yaml 形式でキーにメッセージの変換対象、値に変�
 
 と記述した場合は <AS_ROOT>/public/emoticons/test.gif に画像ファイルを保存し、メッセージ中に (test) と記述することで画像が展開されます。
 
+CSS/Javascriptプラグイン
+----------------------------
+
+機能
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+すべてのページに指定されたスタイルシート・Javascriptを挿入することで、簡単に機能拡張できるようにします。
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+config/filter\_intra.yml に以下を記述します
+
+.. code-block:: ruby
+
+  some mallowlabs code
+
+使い方
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. 各ページのフッターにある **AsaksuaSatellite** リンクをクリックします。
+
+.. image:: images/about_link.png
+
+2. 全体設定画面が表示されるので、スタイルシート・Javascriptを追加します。
+
+.. image:: images/plugin_css_js.png
+
+拡張例
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+未読件数表示(https://gist.github.com/4189242)
+    faviconにメッセージの未読件数を表示します。
 
 ローカル認証
 -----------------------
