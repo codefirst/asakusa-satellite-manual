@@ -137,3 +137,13 @@ chrome://settings/contentExceptions#notifications
 3. 検索結果の前後の発言を表示します。
 
 .. image:: images/search_result_around.png
+
+バージョンの確認
+-----------------------
+1. 各ページのフッターにある **AsaksuaSatellite** リンクをクリックします。
+
+.. image:: images/about_link.png
+
+2. 現在のAsakusaSatelliteのバージョン、および主要ライブラリのバージョンが表示されます。
+
+.. image:: images/about_page.png
