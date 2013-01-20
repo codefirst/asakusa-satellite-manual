@@ -267,3 +267,32 @@ private な部屋に追加するときの注意点
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 このプラグインで認証されたユーザは、ユーザ ID として Redmine のユーザの **メールアドレス** が保存されます。
 したがって、private に設定された部屋にこのプラグインで認証されたユーザを追加する場合は、Redmine のユーザの **メールアドレス** を指定する必要があります。
+
+.. _watage:
+
+Watage プラグイン
+------------------------------------------------------
+
+機能
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Watage <https://github.com/codefirst/watage>`_ を利用し、添付ファイルをDropboxなどのクラウドストレージ上に保存するようにします。
+
+設定
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+config/filter\_intra.yml に以下を記述します
+
+.. code-block:: ruby
+
+  some mallowlabs coool configure file format
+
+token/secret tokenをWatageから取得した上で、config/settings.yml に以下を記述します。
+
+.. code-block:: ruby
+
+  attachment_policy: watage
+  attachment_path: <WatageのURL(例: http://watage.examlpe.com/)>
+  watage_token: <your watage token>
+  watage_token_secret: <your watage token secret>
+

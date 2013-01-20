@@ -332,13 +332,6 @@ AsakusaSatellite を再起動することで認証が切り替わります。
 * `ローカル認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_localauth_plugin>`_
 * `Redmine 認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_redmineauth_plugin>`_
 
-.. _watage:
-
-添付ファイルの保存方法の変更 (0.8.1 以降)
-------------------------------------------
-
-TBD
-
 UserScript で AsakusaSatellite のイベントを取得する方法 (0.8.1 以降)
 ----------------------------------------------------------------------------
 
