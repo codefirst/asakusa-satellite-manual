@@ -169,6 +169,8 @@ assetファイル(画像、CSS等)の公開 (0.8.1以降)
 
 例えば `plugins/as_hoge/app/assets/stylesheets/style.css` にファイルを配置すると `/plugin/as_hoge/stylesheets/sytle.css` でアクセスできます。
 
+.. _auth:
+
 認証方法の変更 (0.8.1 以降)
 --------------------------------------
 
@@ -329,6 +331,13 @@ AsakusaSatellite を再起動することで認証が切り替わります。
 
 * `ローカル認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_localauth_plugin>`_
 * `Redmine 認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_redmineauth_plugin>`_
+
+.. _watage:
+
+添付ファイルの保存方法の変更 (0.8.1 以降)
+------------------------------------------
+
+TBD
 
 UserScript で AsakusaSatellite のイベントを取得する方法 (0.8.1 以降)
 ----------------------------------------------------------------------------

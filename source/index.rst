@@ -14,6 +14,7 @@ Contents:
    setup
    heroku
    function
+   config
    websocket
    plugin
    writing-plugins
