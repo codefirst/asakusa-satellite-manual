@@ -315,3 +315,51 @@ AsakusaSatellite を再起動することで認証が切り替わります。
 * `ローカル認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_localauth_plugin>`_
 * `Redmine 認証プラグイン <https://github.com/codefirst/AsakusaSatellite/tree/master/plugins/as_redmineauth_plugin>`_
 
+UserScript の書き方
+--------------------------------------
+
+AsakusaSatellite は、UserScript が安全にクロスドメイン制約を回避できるようにするため、
+window.postMessage を用いて各種イベントを通知します。
+
+通知されるイベントの種類
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+以下のイベントが通知されます。
+
+.. glossary::
+
+  connect
+    websocket サーバとの接続が確立した際に通知されます
+
+  error
+    websocket サーバとの接続でエラーが発生した際に通知されます
+
+  disconnect
+    websocket サーバとの接続が切断された際に通知されます
+
+  create
+    新規メッセージを受信した際に通知されます
+
+  update
+    メッセージ更新された際に通知されます
+
+  delete
+    メッセージが削除された際に通知されます
+
+
+イベントハンドラのサンプル
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+以下のように message イベントに対してイベントハンドラを登録し、
+イベント内の type の値で処理を切り替えてください。
+
+::
+
+    window.addEventListener('message', function(e){
+        switch(e.data.type) {
+        case "create":
+            ...
+        case "update":
+            ...
+        }
+    });
