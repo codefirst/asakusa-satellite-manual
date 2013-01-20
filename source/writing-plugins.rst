@@ -154,6 +154,13 @@ chat_room_bottom
 message_buttons
     各発言のボタンが表示される箇所に HTML を差し込みます
 
+assetファイル(画像、CSS等)の公開 (0.8.1以降)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`plugins/<plugin>/app/assets/<type>/<filename>` にファイルを配置すると、 `/plugin/<plugin>/<type>/<filename>` でアクセスできるようになります。
+
+例えば `plugins/as_hoge/app/assets/stylesheets/style.css` にファイルを配置すると `/plugin/as_hoge/stylesheets/sytle.css` でアクセスできます。
+
 認証方法の変更 (0.8.1 以降)
 --------------------------------------
 
