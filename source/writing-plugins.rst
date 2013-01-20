@@ -153,6 +153,14 @@ chat_room_bottom
     チャットルームの下部に HTML を差し込みます
 message_buttons
     各発言のボタンが表示される箇所に HTML を差し込みます
+account_setting_item(0.8.1以降)
+    個人設定画面に HTML を差し込みます
+global_setting_item(0.8.1以降)
+    Aboutページに HTML を差し込みます
+global_header(0.8.1以降)
+    すべてのページの上部に HTML を差し込みます。
+global_footer(0.8.1以降)
+    すべてのページの下部に HTML を差し込みます。
 
 assetファイル(画像、CSS等)の公開 (0.8.1以降)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
