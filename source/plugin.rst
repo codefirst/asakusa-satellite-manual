@@ -246,7 +246,7 @@ emoticon プラグイン
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
-1. config/filter\_intra.yml に以下を記述します
+1. config/filter\_intra.yml の filter 要素の下に以下を記述します。
 
 .. code-block:: ruby
 
@@ -276,11 +276,11 @@ CSS/Javascriptプラグイン
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-config/filter\_intra.yml に以下を記述します
+config/filter\_intra.yml の plugins 要素の下に以下を記述します
 
 .. code-block:: ruby
 
-  some mallowlabs code
+  - dir: as_global_js_css
 
 使い方
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -308,7 +308,13 @@ AsakusaSatellite は Twitter の OAuth を用いて認証を行いますが、
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
-<AS_ROOT>/config/settings.yml に以下を記述します。(0.8.1 以降)
+config/filter\_intra.yml の plugins 要素の下に以下を記述します
+
+.. code-block:: ruby
+
+  - dir: as_localauth_plugin
+
+<AS_ROOT>/config/settings.yml に以下を記述します。
 本設定を行うことにより、Twitter の OAuth による認証は無効になり、
 ローカル認証が有効になります。
 
@@ -358,7 +364,13 @@ AsakusaSatellite の認証を Redmine の API アクセスキーによる認証�
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
-<AS_ROOT>/config/settings.yml に以下を記述します。(0.8.1 以降)
+config/filter\_intra.yml の plugins 要素の下に以下を記述します
+
+.. code-block:: ruby
+
+  - dir: as_redminelauth_plugin
+
+<AS_ROOT>/config/settings.yml に以下を記述します。
 
 .. code-block:: ruby
 
@@ -394,11 +406,11 @@ Watage プラグイン
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-config/filter\_intra.yml に以下を記述します
+config/filter\_intra.yml の plugins 要素の下にに以下を記述します
 
 .. code-block:: ruby
 
-  some mallowlabs coool configure file format
+  - dir: as_watage_plugin
 
 token/secret tokenをWatageから取得した上で、config/settings.yml に以下を記述します。
 
