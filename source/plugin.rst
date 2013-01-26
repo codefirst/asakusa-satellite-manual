@@ -401,7 +401,12 @@ Watage プラグイン
 機能
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Watage <https://github.com/codefirst/watage>`_ を利用し、添付ファイルをDropboxなどのクラウドストレージ上に保存するようにします。
+AsakusaSatellite を Heroku にデプロイした場合、
+Heroku の制限により、ファイルアップロード機能が利用できません。
+
+そこでストレージサービスの汎用インタフェースである `Watage <https://github.com/codefirst/watage>`_ を利用し、添付ファイルをDropboxなどのクラウドストレージ上に保存するプラグインです。
+
+Watage の詳細については、 `Watage のドキュメント <http://watage.asakusa-satellite.org/manual>`_ を参照ください。
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
