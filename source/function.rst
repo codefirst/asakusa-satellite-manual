@@ -97,6 +97,7 @@
 
 .. image:: images/image_added.png
 
+.. _desktopnotification:
 
 デスクトップ通知
 -----------------------
