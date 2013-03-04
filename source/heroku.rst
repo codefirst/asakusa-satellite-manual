@@ -35,8 +35,8 @@ AsakusaSatellite のトップディレクトリにて以下のコマンドを発
 
 ::
 
-    $ heroku addons:add mongohq:free
-    ----> Adding mongohq:free to nameless-sands-3102... done, v2 (free)
+    $ heroku addons:add mongohq:sandbox
+    ----> Adding mongohq:sandbox to nameless-sands-3102... done, v2 (free)
 
 5. MongoDB の設定をします。
 
