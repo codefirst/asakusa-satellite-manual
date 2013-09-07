@@ -60,7 +60,30 @@ PUT 及び DELETE に対応していないライブラリでは、
 
     * **room_id** (必須)  … 発言を作成する対象となる部屋の ID もしくはニックネームを指定します
     * **message** (必須)  … 発言内容の文字列を指定します
+    * **files** (任意)  … 添付するファイルのパスを指定します
     * **api_key** (必須)  … ユーザの API キーを指定します
+
+   (例)
+
+   .. code-block:: ruby
+   
+      # Usage:
+      # ruby ./uploader.rb http://hoge.com/api/v1/message.json hoge.jpg
+      #
+      require 'rest-client'
+      
+      url   = ARGV.shift
+      files = ARGV
+      
+      RestClient.log = 'stdout'
+      data = {}
+      data["api_key"] = "(API Key)"
+      data["room_id"] = "(Room ID)"
+      data["message"] = "message"
+      files.each do |file|
+        data["files[#{file}]"] = File.new(file, 'rb')
+      end
+      RestClient.post(url, data)
 
 * 発言の更新
 
