@@ -3,10 +3,12 @@
 
 v0.9.0(2014-01-21)
 ------------------------------
-* 機能追加: Ruby 2.0 を正式サポート
+* 機能追加: Ruby 2.0 / 2.1 を正式サポート
   `#35 <https://github.com/codefirst/AsakusaSatellite/pull/35>`_
   `#47 <https://github.com/codefirst/AsakusaSatellite/pull/47>`_
   `#102 <https://github.com/codefirst/AsakusaSatellite/pull/102>`_
+  `#163 <https://github.com/codefirst/AsakusaSatellite/pull/163>`_
+  `#164 <https://github.com/codefirst/AsakusaSatellite/pull/164>`_
 * 機能追加: 絵文字のサジェスト機能を追加
   `#135 <https://github.com/codefirst/AsakusaSatellite/pull/135>`_
 * 機能追加: message/list API に order パラメータを追加
