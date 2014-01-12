@@ -1,6 +1,57 @@
 更新履歴
 =======================
 
+v0.9.0(2014-01-21)
+------------------------------
+* 機能追加: Ruby 2.0 を正式サポート
+  `#35 <https://github.com/codefirst/AsakusaSatellite/pull/35>`_
+  `#47 <https://github.com/codefirst/AsakusaSatellite/pull/47>`_
+  `#102 <https://github.com/codefirst/AsakusaSatellite/pull/102>`_
+* 機能追加: 絵文字のサジェスト機能を追加
+  `#135 <https://github.com/codefirst/AsakusaSatellite/pull/135>`_
+* 機能追加: message/list API に order パラメータを追加
+  `#110 <https://github.com/codefirst/AsakusaSatellite/pull/110>`_
+* 機能追加: message/list API に older_than と newer_than パラメータを追加
+  `#162 <https://github.com/codefirst/AsakusaSatellite/pull/162>`_
+* 機能追加: 部屋へのユーザの招待で一度に複数ユーザを指定できる機能を追加
+  `#45 <https://github.com/codefirst/AsakusaSatellite/pull/45>`_
+  `#48 <https://github.com/codefirst/AsakusaSatellite/pull/48>`_
+* 機能追加: 未ログインのユーザを招待できる機能を追加
+  `#50 <https://github.com/codefirst/AsakusaSatellite/pull/50>`_
+* 機能追加: :in_chatroom_controller フックポイントを追加
+  `#70 <https://github.com/codefirst/AsakusaSatellite/pull/70>`_
+* 機能追加: WebSocket で送信される JSON データに prev_id フィールドを追加
+  `#112 <https://github.com/codefirst/AsakusaSatellite/pull/112>`_
+* 機能追加: QuoteIt プラグインで QuoteIt の URL を指定する環境変数を追加
+  `#120 <https://github.com/codefirst/AsakusaSatellite/pull/120>`_
+* 機能追加: API で添付ファイルを追加できる機能を追加
+  `#129 <https://github.com/codefirst/AsakusaSatellite/pull/129>`_
+* 機能追加: ブラウザの戻るで戻った際に WebSocket で受信したメッセージが消えないようにする機能を追加
+  `#142 <https://github.com/codefirst/AsakusaSatellite/pull/142>`_
+* 機能変更: Twitter API を v1.1 に移行
+  `#62 <https://github.com/codefirst/AsakusaSatellite/pull/62>`_
+* 機能変更: Rails のバージョンを 3.1.14 に変更
+  `#132 <https://github.com/codefirst/AsakusaSatellite/pull/132>`_
+* 機能変更: いくつかのファイル名を Rails の規約に合わせて変更
+  `#40 <https://github.com/codefirst/AsakusaSatellite/pull/40>`_
+  `#52 <https://github.com/codefirst/AsakusaSatellite/pull/52>`_
+* 機能変更: 絵文字を AsakusaSatellite 自身がホストするように変更
+  `#113 <https://github.com/codefirst/AsakusaSatellite/pull/113>`_
+* 機能変更: message/list API で HTML メッセージがキャッシュされるように変更
+  `#150 <https://github.com/codefirst/AsakusaSatellite/pull/150>`_
+* 機能修正: 存在しない絵文字は絵文字展開をしないように修正
+  `#75 <https://github.com/codefirst/AsakusaSatellite/pull/75>`_
+* 機能修正: WebSocket が接続できていない環境でも動作するように修正
+  `#87 <https://github.com/codefirst/AsakusaSatellite/pull/87>`_
+  `#98 <https://github.com/codefirst/AsakusaSatellite/pull/98>`_
+  `#155 <https://github.com/codefirst/AsakusaSatellite/pull/155>`_
+* 機能修正: サブディレクトリで動作させた場合に添付ファイルが添付できない不具合を修正
+  `#90 <https://github.com/codefirst/AsakusaSatellite/pull/90>`_
+* 機能修正: デスクトップ通知を Firefox 22 以降で動作するように修正
+  `#118 <https://github.com/codefirst/AsakusaSatellite/pull/118>`_
+* 機能修正: Safari 7 で添付ファイルが添付できない不具合を修正
+  `#151 <https://github.com/codefirst/AsakusaSatellite/pull/151>`_
+
 v0.8.1(2013-03-24)
 ------------------------------
 * 機能追加: 検索結果ページのページネーションを追加
