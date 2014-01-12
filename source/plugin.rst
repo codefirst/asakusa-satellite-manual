@@ -235,6 +235,7 @@ config/filter\_intra.yml に以下を記述します
 機能
 ^^^^^^^^^^^^^^^^^^^^^^^
 メッセージ中の :絵文字名: を画像として展開します。
+また、メッセージを入力中に ":" を入力すると、利用可能な絵文字をサジェストします。
 
 設定
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -244,21 +245,9 @@ config/filter\_intra.yml に以下を記述します
 
   - name: emoji_filter
 
-展開される画像は、環境変数 AS_EMOJI_URL_ROOT を使用して $AS_EMOJI_URL_ROOT/絵文字名.png として展開されます。
-
-AsakusaSatellite に同梱する場合は以下の手順で画像ファイルを配備します。
-
-1. <AS_ROOT>/public/emoji に画像ファイルを、拡張子を .png として格納します
-2. 環境変数 AS_EMOJI_URL_ROOT に http(s)://as.root.url/emoji を指定して AsakusaSatellite を起動します
-
-上記のように設定した場合、メッセージ中に :xxx: と記述した場合 http(s)://as.root.url/emoji/xxx.png を展開して表示します。
-
-動作確認が目的の場合は以下の2つの URL を指定できます。
-
-* http://www.emoji-cheat-sheet.com/graphics/emojis/
-* http://assets.github.com/images/icons/emoji/
-
-上記 URL を指定した場合、メッセージ中に :smile: と記述した場合、http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png と展開され、以下のように画像を表示します。
+利用可能な絵文字の一覧は、
+`Emoji cheat sheet <http://www.emoji-cheat-sheet.com/>`_
+をご参照ください。
 
 .. image:: http://www.emoji-cheat-sheet.com/graphics/emojis/smile.png
    :width: 16px
