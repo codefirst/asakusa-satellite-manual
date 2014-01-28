@@ -4,7 +4,7 @@
 -----------------------
 以下のソフトウェアのインストールが必要です。
 
-* Ruby 1.8.7 or 1.9.3
+* Ruby 1.8.7 / 1.9.3 / 2.0.0 / 2.1.0 or JRuby 1.7.1
 * RubyGems 1.4.2 or later
 * Bundler 1.0.7 or later
 * MongoDB 1.8.1 or later
