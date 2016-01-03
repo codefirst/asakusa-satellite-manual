@@ -1,6 +1,6 @@
 A manual of AsakusaSatellite
 ===================
-AsakusaSatellite is [here](http://www.codefirst.org/AsakusaSatellite/)
+AsakusaSatellite is [here](https://www.codefirst.org/AsakusaSatellite/)
 
 Requirement
 ----------------
@@ -18,5 +18,5 @@ Publish
 
     $ git push origin master
 
-See [Read the Docs](http://asakusasatellite.readthedocs.org/en/latest/index.html)
+See [Read the Docs](https://asakusasatellite.readthedocs.org/en/latest/index.html)
 
